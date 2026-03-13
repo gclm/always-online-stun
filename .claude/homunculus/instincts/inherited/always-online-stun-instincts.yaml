@@ -1,0 +1,231 @@
+# Instincts generated from https://github.com/gclm/always-online-stun
+# Generated: 2026-03-13T11:21:14.372Z
+# Version: 2.0
+
+---
+id: always-online-stun-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/gclm/always-online-stun
+---
+
+# Always Online Stun Commit Length
+
+## Action
+
+Keep commit messages concise (under 50 characters)
+
+## Evidence
+
+- Average commit message length: 33 chars
+- Based on 200 commits
+
+---
+id: always-online-stun-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/gclm/always-online-stun
+---
+
+# Always Online Stun Naming Files
+
+## Action
+
+Use snake_case naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: snake_case
+
+---
+id: always-online-stun-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/gclm/always-online-stun
+---
+
+# Always Online Stun Export Style
+
+## Action
+
+Prefer mixed exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: mixed
+
+---
+id: always-online-stun-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/gclm/always-online-stun
+---
+
+# Always Online Stun Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: always-online-stun-workflow-stun-server-validation-check
+trigger: "when doing stun server validation check"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/gclm/always-online-stun
+---
+
+# Always Online Stun Workflow Stun Server Validation Check
+
+## Action
+
+Follow the stun-server-validation-check workflow:
+1. Test STUN servers for UDP and TCP protocols
+2. Validate IPv4 and IPv6 connectivity
+3. Check NAT testing capabilities
+4. Update all validation result files with current status
+5. Commit updated validation lists
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~20x per month
+- Files: valid_hosts.txt, valid_hosts_tcp.txt, valid_ipv4s.txt
+
+---
+id: always-online-stun-file-naming
+trigger: "When creating new files in this Rust project"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: gclm/always-online-stun
+---
+
+# Always Online Stun File Naming
+
+## Action
+
+Use snake_case naming convention for file names
+
+## Evidence
+
+- Files like valid_hosts.txt, valid_ipv4s.txt follow snake_case
+- Rust project structure indicates snake_case preference
+
+---
+id: always-online-stun-commit-format
+trigger: "When making automated commits for STUN validation"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: gclm/always-online-stun
+---
+
+# Always Online Stun Commit Format
+
+## Action
+
+Use 'Check [Day Month DD HH:MM:SS UTC YYYY]' format
+
+## Evidence
+
+- All 8 commit examples follow exact pattern: Check Fri Mar 13 10:47:58 UTC 2026
+- Consistent timestamp format across all automated commits
+
+---
+id: always-online-stun-validation-workflow
+trigger: "When scheduled automated checks run to verify STUN server availability"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: gclm/always-online-stun
+---
+
+# Always Online Stun Validation Workflow
+
+## Action
+
+Test UDP/TCP protocols, validate IPv4/IPv6, check NAT testing, update validation files, then commit
+
+## Evidence
+
+- Workflow frequency of 20 occurrences
+- 12 validation files consistently updated
+- GitHub workflow file .github/workflows/run-hourly-check.yml
+
+---
+id: always-online-stun-validation-files
+trigger: "When updating STUN server validation results"
+confidence: 0.8
+domain: workflow
+source: repo-analysis
+source_repo: gclm/always-online-stun
+---
+
+# Always Online Stun Validation Files
+
+## Action
+
+Update all 12 validation files covering hosts/IPs across UDP/TCP and IPv4/IPv6 combinations
+
+## Evidence
+
+- 12 validation files consistently present
+- Covers all combinations: valid_hosts, valid_ipv4s, valid_ipv6s with _tcp variants and _nat_testing variants
+
+---
+id: always-online-stun-github-automation
+trigger: "When setting up automated validation in STUN projects"
+confidence: 0.7
+domain: architecture
+source: repo-analysis
+source_repo: gclm/always-online-stun
+---
+
+# Always Online Stun Github Automation
+
+## Action
+
+Create GitHub Actions workflow in .github/workflows/ directory for hourly checks
+
+## Evidence
+
+- Config file .github/workflows/run-hourly-check.yml present
+- Hourly automated commit pattern suggests GitHub Actions scheduling
+
+---
+id: always-online-stun-project-structure
+trigger: "When organizing STUN validation project files"
+confidence: 0.6
+domain: architecture
+source: repo-analysis
+source_repo: gclm/always-online-stun
+---
+
+# Always Online Stun Project Structure
+
+## Action
+
+Use single-package layout with src/, examples/, .github/ folders
+
+## Evidence
+
+- Folder structure shows single-package type
+- Common folders include src, examples, .github
+
