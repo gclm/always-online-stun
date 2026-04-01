@@ -1,0 +1,308 @@
+# Instincts generated from https://github.com/gclm/always-online-stun
+# Generated: 2026-04-01T05:20:42.637Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: always-online-stun-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/gclm/always-online-stun
+---
+
+# Always Online Stun Commit Length
+
+## Action
+
+Keep commit messages concise (~34 characters)
+
+## Evidence
+
+- Average commit message length: 34 chars
+- Based on 200 commits
+
+---
+id: always-online-stun-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/gclm/always-online-stun
+---
+
+# Always Online Stun Naming Files
+
+## Action
+
+Use snake_case naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: snake_case
+
+---
+id: always-online-stun-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/gclm/always-online-stun
+---
+
+# Always Online Stun Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: always-online-stun-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/gclm/always-online-stun
+---
+
+# Always Online Stun Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: always-online-stun-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/gclm/always-online-stun
+---
+
+# Always Online Stun Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: always-online-stun-workflow-update-valid-hosts-and-ip-lists
+trigger: "when doing update valid hosts and ip lists"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/gclm/always-online-stun
+---
+
+# Always Online Stun Workflow Update Valid Hosts And Ip Lists
+
+## Action
+
+Follow the update-valid-hosts-and-ip-lists workflow:
+1. Regenerate or update valid_hosts.txt and valid_hosts_tcp.txt
+2. Regenerate or update valid_ipv4s.txt and valid_ipv4s_tcp.txt
+3. Regenerate or update valid_ipv6s.txt and valid_ipv6s_tcp.txt
+4. Regenerate or update valid_nat_testing_hosts.txt and valid_nat_testing_hosts_tcp.txt
+5. Regenerate or update valid_nat_testing_ipv4s.txt and valid_nat_testing_ipv4s_tcp.txt
+6. Regenerate or update valid_nat_testing_ipv6s.txt and valid_nat_testing_ipv6s_tcp.txt
+7. Commit all these files together with a timestamped message
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~30x per month
+- Files: valid_hosts.txt, valid_hosts_tcp.txt, valid_ipv4s.txt
+
+---
+id: always-online-stun-instinct-naming-files
+trigger: "When creating a new file in the repository"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: gclm/always-online-stun
+---
+
+# Always Online Stun Instinct Naming Files
+
+## Action
+
+Name the file using snake_case
+
+## Evidence
+
+- Pattern in namingConventions.files: snake_case
+- All files in examples/commonFolders use snake_case
+
+---
+id: always-online-stun-instinct-naming-functions
+trigger: "When defining a new function"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: gclm/always-online-stun
+---
+
+# Always Online Stun Instinct Naming Functions
+
+## Action
+
+Name the function using camelCase
+
+## Evidence
+
+- Pattern in namingConventions.functions: camelCase
+
+---
+id: always-online-stun-instinct-naming-classes
+trigger: "When defining a new class or struct"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: gclm/always-online-stun
+---
+
+# Always Online Stun Instinct Naming Classes
+
+## Action
+
+Name the class/struct using PascalCase
+
+## Evidence
+
+- Pattern in namingConventions.classes: PascalCase
+
+---
+id: always-online-stun-instinct-naming-constants
+trigger: "When defining a constant"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: gclm/always-online-stun
+---
+
+# Always Online Stun Instinct Naming Constants
+
+## Action
+
+Name the constant using SCREAMING_SNAKE_CASE
+
+## Evidence
+
+- Pattern in namingConventions.constants: SCREAMING_SNAKE_CASE
+
+---
+id: always-online-stun-instinct-import-style
+trigger: "When importing modules in Rust code"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: gclm/always-online-stun
+---
+
+# Always Online Stun Instinct Import Style
+
+## Action
+
+Use relative import style
+
+## Evidence
+
+- Pattern in importStyle: relative
+
+---
+id: always-online-stun-instinct-export-style
+trigger: "When exporting items from a module"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: gclm/always-online-stun
+---
+
+# Always Online Stun Instinct Export Style
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in exportStyle: named
+
+---
+id: always-online-stun-instinct-test-location
+trigger: "When adding or updating tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: gclm/always-online-stun
+---
+
+# Always Online Stun Instinct Test Location
+
+## Action
+
+Place tests in a separate location from source code
+
+## Evidence
+
+- Pattern in architecture.testLocation: separate
+
+---
+id: always-online-stun-instinct-git-commit-format
+trigger: "When making a commit"
+confidence: 0.85
+domain: git
+source: repo-analysis
+source_repo: gclm/always-online-stun
+---
+
+# Always Online Stun Instinct Git Commit Format
+
+## Action
+
+Use a freeform commit message, often starting with 'Check' followed by a timestamp
+
+## Evidence
+
+- Seen in commit: 'Check Wed Apr 1 03:28:00 UTC 2026'
+- Seen in commit: 'Check Tue Mar 31 23:42:27 UTC 2026'
+
+---
+id: always-online-stun-instinct-workflow-update-valid-hosts
+trigger: "When valid hosts or IP lists need to be refreshed (e.g., for connectivity or NAT testing)"
+confidence: 0.99
+domain: workflow
+source: repo-analysis
+source_repo: gclm/always-online-stun
+---
+
+# Always Online Stun Instinct Workflow Update Valid Hosts
+
+## Action
+
+Regenerate or update all valid_hosts.txt, valid_hosts_tcp.txt, valid_ipv4s.txt, valid_ipv4s_tcp.txt, valid_ipv6s.txt, valid_ipv6s_tcp.txt, valid_nat_testing_hosts.txt, valid_nat_testing_hosts_tcp.txt, valid_nat_testing_ipv4s.txt, valid_nat_testing_ipv4s_tcp.txt, valid_nat_testing_ipv6s.txt, and valid_nat_testing_ipv6s_tcp.txt, then commit them together with a timestamped message
+
+## Evidence
+
+- Workflow: update-valid-hosts-and-ip-lists
+- Commit sequence and files in workflow example
+
